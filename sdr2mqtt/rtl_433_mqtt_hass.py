@@ -547,13 +547,13 @@ mappings = {
         }
     
     },
-    "consumption": {
+    "consumption_data": {
         "device_type": "meter",
         "object_suffix": "meter",
         "config": {
             "device_class": "gas",
             "name": "meter",
-            "unit_of_measurement": "ft³",
+            "unit_of_measurement": "ccf",
             "value_template": "{{ value|float }}"
         }
     },
