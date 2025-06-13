@@ -557,6 +557,16 @@ mappings = {
             "value_template": "{{ value|float }}"
         }
     },
+    "consumption": {
+        "device_type": "meter",
+        "object_suffix": "meter",
+        "config": {
+            "device_class": "gas",
+            "name": "meter",
+            "unit_of_measurement": "ft³",
+            "value_template": "{{ value|float }}"
+        }
+    },
     "strike_count": {
         "device_type": "sensor",
         "object_suffix": "strcnt",
