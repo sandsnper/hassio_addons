@@ -548,7 +548,7 @@ mappings = {
     
     },
     "consumption_data": {
-        "device_type": "meter",
+        "device_type": "sensor",
         "object_suffix": "meter",
         "config": {
             "device_class": "gas",
@@ -558,7 +558,7 @@ mappings = {
         }
     },
     "consumption": {
-        "device_type": "meter",
+        "device_type": "sensor",
         "object_suffix": "meter",
         "config": {
             "device_class": "gas",
