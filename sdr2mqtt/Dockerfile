@@ -10,6 +10,7 @@ ENV MQTT_HOST=127.0.0.1 \
     MQTT_RETAIN=True \
     MQTT_TOPIC=rtl_433 \
     FREQUENCY=433.92M \
+    HOP_TIME="" \
     PROTOCOL="" \
     WHITELIST_ENABLE=False \
     EXPIRE_AFTER=0 \
