@@ -1,9 +1,9 @@
 {
   "name": "SDR to Home Assistant",
-  "version": "0.1.24.U8",
+  "version": "0.1.24.U9",
   "slug": "sdr2mqtt",
   "description": "SDR/RTL Sensors to Home Assistant via MQTT with Autodiscovery",
-  "url": "https://github.com/thejeffreystone/hassio_addons",
+  "url": "https://github.com/sandsnper/hassio_addons",
 
   "startup": "services",
   "arch": ["aarch64", "amd64", "armhf", "armv7", "i386"],
