@@ -9,6 +9,7 @@ MQTT_TOPIC="$(bashio::config 'mqtt_topic')"
 MQTT_RETAIN="$(bashio::config 'mqtt_retain')"
 PROTOCOL="$(bashio::config 'protocol')"
 FREQUENCY="$(bashio::config 'frequency')"
+HOP_TIME="$(bashio::config 'hop_interval')"
 UNITS="$(bashio::config 'units')"
 DISCOVERY_PREFIX="$(bashio::config 'discovery_prefix')"
 DISCOVERY_INTERVAL="$(bashio::config 'discovery_interval')"
@@ -35,6 +36,7 @@ bashio::log.info "MQTT Topic =" $MQTT_TOPIC
 bashio::log.info "MQTT Retain =" $MQTT_RETAIN
 bashio::log.info "PROTOCOL =" $PROTOCOL
 bashio::log.info "FREQUENCY =" $FREQUENCY
+bashio::log.info "HOP Time =" $HOP_TIME
 bashio::log.info "Whitelist Enabled =" $WHITELIST_ENABLE
 bashio::log.info "Whitelist =" $WHITELIST
 bashio::log.info "Expire After =" $EXPIRE_AFTER
@@ -45,4 +47,4 @@ bashio::log.info "AUTO_DISCOVERY =" $AUTO_DISCOVERY
 bashio::log.info "DEBUG =" $DEBUG
 bashio::log.blue "::::::::rtl_433 running output::::::::"
 
-rtl_433 $FREQUENCY $PROTOCOL -C $UNITS -H 60 -F mqtt://$MQTT_HOST:$MQTT_PORT,user=$MQTT_USERNAME,pass=$MQTT_PASSWORD,retain=$MQTT_RETAIN,events=$MQTT_TOPIC/events,states=$MQTT_TOPIC/states,devices=$MQTT_TOPIC[/model][/id][/channel:A]  -M time:tz:local -M protocol -M level | /scripts/rtl_433_mqtt_hass.py
+rtl_433 $FREQUENCY $PROTOCOL -C $UNITS -H $HOP_TIME -F mqtt://$MQTT_HOST:$MQTT_PORT,user=$MQTT_USERNAME,pass=$MQTT_PASSWORD,retain=$MQTT_RETAIN,events=$MQTT_TOPIC/events,states=$MQTT_TOPIC/states,devices=$MQTT_TOPIC[/model][/id][/channel:A]  -M time:tz:local -M protocol -M level | /scripts/rtl_433_mqtt_hass.py
