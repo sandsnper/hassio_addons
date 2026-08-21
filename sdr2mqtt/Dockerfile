@@ -1,5 +1,5 @@
-ARG BUILD_FROM="alpine"
-FROM $BUILD_FROM
+#ARG BUILD_FROM="alpine"
+FROM ghcr.io/home-assistant/base:latest
 RUN echo "starting dockerfile"
 # Define environment variables
 # Use this variable when creating a container to specify the MQTT broker host.
