@@ -1,3 +1,4 @@
+RUN echo "starting dockerfile"
 ARG BUILD_FROM="alpine"
 FROM $BUILD_FROM
 
