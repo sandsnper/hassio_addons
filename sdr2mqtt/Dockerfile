@@ -23,7 +23,7 @@ ENV MQTT_HOST=127.0.0.1 \
 LABEL Maintainer="Art Hanner" \
 Description="This image is used to start the RTL433 to HASS script that will monitor for 433Mhz devices and send the data to an MQTT server"
 
-WORKDIR /data
+WORKDIR /data/
 
 # Copy scripts
 COPY entry.sh /scripts/
