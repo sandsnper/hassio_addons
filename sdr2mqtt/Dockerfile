@@ -24,7 +24,7 @@ LABEL Maintainer="Art Hanner" \
 Description="This image is used to start the RTL433 to HASS script that will monitor for 433Mhz devices and send the data to an MQTT server"
 
 WORKDIR /data/
-
+RUN mkdir /scripts/
 # Copy scripts
 COPY entry.sh /scripts/
 COPY rtl_433_mqtt_hass.py /scripts/
