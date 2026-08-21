@@ -24,15 +24,16 @@ LABEL Maintainer="Art Hanner" \
 Description="This image is used to start the RTL433 to HASS script that will monitor for 433Mhz devices and send the data to an MQTT server"
 
 WORKDIR /data/
-RUN mkdir /scripts/
+RUN mkdir /scripts/ && echo "Made scripts dir"
 # Copy scripts
 COPY entry.sh /scripts/
 COPY rtl_433_mqtt_hass.py /scripts/
+RUN echo "Moved files"
 # install rtl_433, rtl-sdr, libusb, mosquitto-clients, python3 py3-paho-mqtt; and deps of rtl_433_mqtt_hass.py.
 # make entry.sh and rtl_433_mqtt_hass.py executable.
-RUN apk add --no-cache rtl-sdr rtl_433 libusb mosquitto-clients python3 py3-paho-mqtt && \
-    chmod +x /scripts/entry.sh && \
-    chmod +x /scripts/rtl_433_mqtt_hass.py
+RUN apk add --no-cache rtl-sdr rtl_433 libusb mosquitto-clients python3 py3-paho-mqtt && echo "apk complete" \
+    chmod +x /scripts/entry.sh && echo "chmod 1 complete" \
+    chmod +x /scripts/rtl_433_mqtt_hass.py && echo "chmod 2 complete"
 
 # Execute entry script
 ENTRYPOINT [ "/scripts/entry.sh" ]
