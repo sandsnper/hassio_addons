@@ -1,4 +1,4 @@
-ARG BUILD_FROM="base"
+ARG BUILD_FROM="alpine"
 FROM $BUILD_FROM
 
 # Define environment variables
