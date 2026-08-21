@@ -1,4 +1,4 @@
-ARG BUILD_FROM="amd64"
+ARG BUILD_FROM="base"
 FROM $BUILD_FROM
 
 # Define environment variables
