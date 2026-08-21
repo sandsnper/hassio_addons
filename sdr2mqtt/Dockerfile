@@ -1,7 +1,6 @@
-RUN echo "starting dockerfile"
 ARG BUILD_FROM="alpine"
 FROM $BUILD_FROM
-
+RUN echo "starting dockerfile"
 # Define environment variables
 # Use this variable when creating a container to specify the MQTT broker host.
 ENV MQTT_HOST=127.0.0.1 \
