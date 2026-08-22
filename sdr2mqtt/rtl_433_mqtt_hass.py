@@ -553,7 +553,7 @@ mappings = {
         "config": {
             "device_class": "gas",
             "name": "meter",
-            "unit_of_measurement": "ccf",
+            "unit_of_measurement": "ft³",
             "value_template": "{{ value|float }}"
         }
     },
