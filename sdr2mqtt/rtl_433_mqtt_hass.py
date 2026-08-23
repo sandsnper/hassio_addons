@@ -637,7 +637,7 @@ def publish_config(mqttc, topic, model, instance, channel, mapping):
     config = mapping["config"].copy()
     config["state_topic"] = "/".join([MQTT_TOPIC, model, instance, channel, topic])
     config["name"] = " ".join([model.replace("-", " "), instance, object_suffix])
-    config["unique_id"] = "".join(["rtl433", device_type, instance, object_suffix])
+    config["unique_id"] = "".join(["rtl433", device_type, model, instance, object_suffix])
     config["availability_topic"] = "/".join([MQTT_TOPIC, "status"])
     config["expire_after"] = EXPIRE_AFTER
 
