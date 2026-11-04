@@ -31,7 +31,8 @@ COPY rtl_433_mqtt_hass.py /scripts/
 RUN echo "Moved files"
 # install rtl_433, rtl-sdr, libusb, mosquitto-clients, python3 py3-paho-mqtt; and deps of rtl_433_mqtt_hass.py.
 # make entry.sh and rtl_433_mqtt_hass.py executable.
-RUN apk add --no-cache rtl-sdr rtl_433 libusb mosquitto-clients python3 py3-paho-mqtt && echo "apk complete" \
+RUN apk update \
+    apk add --no-cache rtl-sdr rtl_433 libusb mosquitto-clients python3 py3-paho-mqtt && echo "apk complete" \
     chmod +x /scripts/entry.sh && echo "chmod 1 complete" \
     chmod +x /scripts/rtl_433_mqtt_hass.py && echo "chmod 2 complete"
 
