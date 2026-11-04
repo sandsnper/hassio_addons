@@ -6,7 +6,7 @@
   "url": "https://github.com/sandsnper/hassio_addons",
 
   "startup": "services",
-  "arch": ["aarch64", "amd64", "armhf", "armv7"],
+  "arch": ["aarch64", "amd64"],
   "usb": true,
   "options":
     {
