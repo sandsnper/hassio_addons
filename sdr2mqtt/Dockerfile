@@ -33,7 +33,7 @@ RUN echo "Moved files"
 # make entry.sh and rtl_433_mqtt_hass.py executable.
 RUN apk add --no-cache rtl-sdr rtl_433 libusb mosquitto-clients python3 py3-paho-mqtt \
     chmod +x /scripts/entry.sh \
-    chmod +x /scripts/rtl_433_mqtt_hass.py \
+    chmod +x /scripts/rtl_433_mqtt_hass.py 
 
 # Execute entry script
 ENTRYPOINT [ "/scripts/entry.sh" ]
