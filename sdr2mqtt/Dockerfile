@@ -32,7 +32,7 @@ RUN echo "Moved files"
 # install rtl_433, rtl-sdr, libusb, mosquitto-clients, python3 py3-paho-mqtt; and deps of rtl_433_mqtt_hass.py.
 # make entry.sh and rtl_433_mqtt_hass.py executable.
 RUN apk update \ 
-    apk add --no-cache rtl-sdr rtl_433 libusb mosquitto-clients python py3-paho-mqtt \
+    apk add --no-cache rtl-sdr rtl_433 libusb mosquitto-clients python3 py3-paho-mqtt \
     echo "apk complete" \
     chmod +x /scripts/entry.sh \
     echo "chmod 1 complete" \
